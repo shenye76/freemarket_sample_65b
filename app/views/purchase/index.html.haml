@@ -25,14 +25,11 @@
           .payment__box__inner__price__right
             = "¥" + @item.price.to_s
         .buy__centerbox__buyinfo__price__under
-          %label{for:"status_all", class: "payment__box__inner__check_box__icon"}
-          %input{type:"checkbox", value:"1",  class: "payment__box__inner__check_box"}/
-          ポイントを使用 (所持ポイント: P180)  
+          %label{for:"status_all", class: "payment__box__inner__check_box"}
+            %input{type:"checkbox", value:"1", class: "payment__box__inner__check_box__icon"}
+            .payment__box__inner__check_box__word
+              ポイントを使用 (所持ポイント: P180)  
            
-        -# = f.label :check, class: "payment__box__inner__check_box" do
-        -#   = f.check_box :check, class: "payment__box__inner__check_box__icon"
-          .payment__box__inner__check_box__word
-            ポイントを使用(所持ポイント：P0)
         .payment__box__inner__card
           .payment__box__inner__card__inner
             .payment__box__inner__card__inner__method
